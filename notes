@@ -1,0 +1,14 @@
+How this program works
+
+. deskpins.cpp - main entry point
+. app.cpp - singleton for instance variables
+
+1. deskpins.cpp - initializes app instance
+  a. loads options
+  b. checks if we have previous instances, otherwise create an instance
+2. app.createMainWnd(opt)
+3. Calls mainwnd.cpp
+4. Creates callback which processes event
+5. If we have automatic pinning, we set a timer and check windows at that
+  time interval
+6. use Util::App::pinWindow to pin windows
